@@ -1,0 +1,7 @@
+{% extends "users/layout.html" %}
+{% block body %}
+<p>{{ user.name }}</p>
+<p>{{ user.email }}</p>
+
+<a href="{{ url_update }}">edit user</a>
+{% endblock %}

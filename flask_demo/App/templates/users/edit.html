@@ -1,0 +1,17 @@
+{% extends "users/layout.html" %}
+{% block body %}
+<p> {{user.username}} </p>  <!--利用雙大引號顯示從views傳入templates的資料-->
+<!--Update user info-->
+<form action="{{ url_update }}" method="post">
+    <label for="email">email</label>
+    <input type="text" name="email" value="{{ user.email }}"><br>
+    <input type="submit" value="Submit">
+</form>
+
+<!--Delete user info-->
+<form action="{{ url_delete }}" method="post">
+    <label for="email">Delete user</label>
+    <input type="hidden" name="email" value="{{ user.email }}"><br>
+    <input type="submit" value="Click here to delete">
+</form>
+{% endblock %}

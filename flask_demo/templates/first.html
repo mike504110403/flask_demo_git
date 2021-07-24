@@ -1,0 +1,54 @@
+<html>
+<head></head>
+
+    <body>
+        <div id="square">
+        <h1 id="head">This is my first heading.</h1>
+        <p id="name">My name is Mike.</p>
+        </div>
+
+        <form action="/" method="post">
+            <label>Username:</label><br>
+            <input type="text" name="username"><br>
+            <label>Email:</label><br>
+            <input type="text" name="email"><br>
+            <input type="submit" value="Submit">
+        </form>
+
+
+    </body>
+
+    <style type="text/css">
+        #head { color: rgb(121, 16, 81); }
+        #square {background-color: darkturquoise;}
+    </style>
+
+    <script>
+        /*document.write("<br/>")
+
+        var rows=5;
+        for (var i=1; i<=rows; i++){
+            for (var j=1; j<=i; j++){
+                document.write("* ")
+            }
+            document.write("<br/>")
+        }*/
+
+        var row=4;
+        for(var i=0; i<row; i++){
+            var str = '';
+            for(var j=1; j<row-i; j++){
+                str = str+'&nbsp';
+            }
+            for(var k=1; k<=(2*i+1); k++){
+                str=str+'*';
+            }
+            document.write(str);
+            document.write("<br/>");
+        }
+        document.getElementById("name").innerHTML = "My name is...";
+        document.getElementById("name").style.color = "blue";
+    </script>
+
+
+</html>

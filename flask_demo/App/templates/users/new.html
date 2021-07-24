@@ -1,0 +1,10 @@
+{% extends "users/layout.html" %}
+{% block body %}
+<form action="{{ url }}" method="post">
+    <label for="username">Username:</label></br>
+    <input type="text" name="username"></br></br>
+    <label for="email">Email:</label></br>
+    <input type="text" name="email"></br></br>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
